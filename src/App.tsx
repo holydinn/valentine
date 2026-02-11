@@ -54,7 +54,7 @@ function App() {
 
             ) : (
                 <div className="wrapper">
-                    <img className='img-main' src='public/cute2.jpg'/>
+                    <img className='img-main' src='/cute2.jpg'/>
                     <p className='question'>будешь моей валентинкой? :)</p>
                     <div className="btn-container">
                         <button className={'btn btn-yes'} onClick={() => setIsOpenModalYes(true)}>да!</button>

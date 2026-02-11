@@ -13,7 +13,7 @@ export function ModalNo({isOpen, onClose, yesClick}: { isOpen: boolean, onClose:
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className={'title'}>как ты мог сказать НЕТ!</div>
-                        <img className='icon' src='public/angry.png'/>
+                        <img className='icon' src='/angry.png'/>
 
                         <div className='text'>
                             <p>ну если ты так решил...</p>

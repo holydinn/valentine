@@ -12,7 +12,7 @@ export function ModalYes({isOpen, onClose}: { isOpen: boolean, onClose: () => vo
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className='title'>поздравляю!!</div>
-                        <img className='icon' src='public/cute.jpg'/>
+                        <img className='icon' src='/cute.jpg'/>
                         <div className='text'>
                             рада, что ты сделал правильный выбор! на самом деле ты сделал его уже в день когда выбрал
                             меня хихихихи
