@@ -1,0 +1,110 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    width: 600px;
+}
+
+.question {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-left: 140px;
+    padding-left: 140px;
+}
+
+.btn {
+    display: inline-block;
+    place-items: center;
+    border-radius: 16px;
+    width: 150px;
+    height: 60px;
+    color: white;
+    border: none;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0;
+
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-yes {
+    background-color: #FF2F6F;
+    box-shadow: inset 0 -6px 6px 0 #DC2960, inset 0 6px 6px 0 #FF347B, 0 14px 29px rgba(51, 9, 22, 20);
+    box-shadow: inset 0 -6px 6px 0 #DC2960, inset 0 6px 6px 0 #FF347B;
+    z-index: 1;
+}
+
+.btn-no:hover {
+    /*box-shadow: inset 0 -7px 7px 0 #35000A, inset 0 7px 7px 0 #45000D, 0 14px 29px rgba(12, 0, 2, 20);*/
+}
+
+.btn-yes:hover {
+    box-shadow: inset 0 -4px 4px 0 #A01D4C, inset 0 4px 4px 0 #DC2869, 0 8px 84px rgba(198, 0, 71, 10);
+    /*box-shadow: inset 0 -4px 4px 0 #A01D4C, inset 0 4px 4px 0 #DC2869;*/
+
+}
+
+.btn-no {
+    background-color: #3E000C;
+    position: absolute;
+    transition: top 0.2s, left 0.2s;
+    box-shadow: inset 0 -7px 7px 0 #35000A, inset 0 7px 7px 0 #45000D;
+
+}
+
+.btn-final {
+    left: 248px;
+    width: 55px;
+    height: 52px;
+    top: 328px;
+}
+
+.btn-final:hover {
+    left: 280px;
+    transform: rotate(10deg);
+    transition: 0.2s ease;
+}
+
+.btn-again {
+    height: 48px;
+    background: #FF2F6F;
+    font-size: 18px;
+}
+
+.img-main {
+    width: 200px;
+    height: 200px;
+    border-radius: 32px;
+}
+
+.final-text {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
