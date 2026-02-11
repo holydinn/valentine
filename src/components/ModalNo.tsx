@@ -6,36 +6,38 @@ export function ModalNo({isOpen, onClose, yesClick}: { isOpen: boolean, onClose:
 
     return (
         <>
-
             {isOpen && (
                 <div className="overlay" onClick={onClose}>
                     <div
                         className="modal-no"
                         onClick={(e) => e.stopPropagation()}
                     >
-
-
-                        <div className={'title'}>How dare you say NO!</div>
-
+                        <div className={'title'}>как ты мог сказать НЕТ!</div>
                         <img className='icon' src='public/angry.png'/>
 
                         <div className='text'>
-                            <p>Try Valentine Plus today!</p>
-                            <p>Navigation with no ads</p>
-
-                            <p>Unlock the full valentine experience</p>
-                            <p>No cancellations</p>
-
-                            <p>£999 Anual £87 monthly</p>
-                            <p> £99 Monthly 7 days free trails</p>
-
-                            <p> Or just say Yes...</p>
+                            <p>ну если ты так решил...</p>
+                            <p>у меня есть заманчивое предложение! можешь оформить подписку на валентин plus </p>
+                            <ul>
+                                <li>никакой рекламы</li>
+                                <li>доступ ко всем фишкам</li>
+                                <li>только любовь и романтика</li>
+                            </ul>
+                            <p>оформи сегодня всего за</p>
+                            <div>
+                                <div>
+                                    <p>1 000 000 поцелуйчиков на год</p>
+                                    <p>83 333 в месяц</p>
+                                </div>
+                                <div>
+                                    <p>100 000 поцелуйчиков на месяц</p>
+                                    <p>пробная версия 3 дня</p>
+                                </div>
+                            </div>
+                            <p> или просто скажи "да"...</p>
                         </div>
-
-
-
                         <button className={'btn btn-yes'} onClick={yesClick}>
-                            yes
+                            конечно да, любимая!
                         </button>
                     </div>
                 </div>

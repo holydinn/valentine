@@ -1,35 +1,34 @@
 import './App.css'
-import {useState} from "react";
+import {useRef, useState} from "react";
 import {ModalNo} from "./components/ModalNo.tsx";
 import {ModalYes} from "./components/ModalYes.tsx";
 
 function App() {
-    const [pos, setPos] = useState({top: 324, left: 310});
     const [step, setStep] = useState(0);
     const [yesClicked, setYesClicked] = useState(false);
     const [isOpenModalNo, setIsOpenModalNo] = useState(false);
     const [isOpenModalYes, setIsOpenModalYes] = useState(false);
+    const lastCall = useRef(0);
 
     const positions = [
-        {top: 444, left: 203},
-        {top: 300, left: -50},
-        {top: 100, left: -115},
-        {top: -150, left: 350},
-        {top: 20, left: 610},
-        {top: 300, left: 450},
-        {top: 300, left: 450},
+        {top: 324, left: 310, text: 'нет'},
+        {top: 444, left: 203, text: 'в смысле нет?'},
+        {top: 300, left: -50, text: 'эй!!'},
+        {top: 100, left: -115, text: 'хватит бегать за мной!'},
+        {top: -120, left: 350, text: 'ваня!!!!'},
+        {top: 20, left: 610, text: 'последний раз говорю'},
+        {top: 200, left: 750, text: 'стой!!!!'},
+        {top: 350, left: 450, text: 'одумайся!!!!!'}
     ];
+    const currentPos = positions[step];
+    const isFinal = step >= positions.length
 
     const handleHover = () => {
-        console.log(step)
-
-        if (!isFinal) {
-            setPos({
-                top: positions[step].top,
-                left: positions[step].left,
-            });
-            setStep(step + 1);
-        }
+        if (isFinal) return;
+        const now = Date.now();
+        if (now - lastCall.current < 300) return;
+        lastCall.current = now;
+        setStep(step + 1);
     };
 
     const handleNoClick = () => {
@@ -39,37 +38,35 @@ function App() {
     }
 
     const reset = () => {
-        setPos({top: 324, left: 310})
         setStep(0);
         setYesClicked(false);
     }
 
-
-    const isFinal = step >= positions.length
     return (
         <>
             {yesClicked ? (
                 <>
                     <div className="wrapper">
-                        <p className='final-text'>you make the right choice! see you soon!</p>
-                        <button className={'btn btn-again'} onClick={reset}>try again</button>
+                        <p className='final-text'>я знала, что ты сделаешь правильный выбор! скоро увидимся!</p>
+                        <button className={'btn btn-again'} onClick={reset}>попробовать еще раз</button>
                     </div>
                 </>
 
             ) : (
                 <div className="wrapper">
                     <img className='img-main' src='public/cute2.jpg'/>
-                    <p className='question'>will you be my valentine? :)</p>
+                    <p className='question'>будешь моей валентинкой? :)</p>
                     <div className="btn-container">
-                        <button className={'btn btn-yes'} onClick={() => setIsOpenModalYes(true)}>yes!</button>
+                        <button className={'btn btn-yes'} onClick={() => setIsOpenModalYes(true)}>да!</button>
                         <button
                             className={`btn btn-no ${isFinal ? 'btn-final' : ''}`}
                             onMouseEnter={handleHover}
                             onClick={handleNoClick}
                             style={isFinal ? {} : {
-                                top: pos.top,
-                                left: pos.left,
-                            }}>no
+                                top: currentPos.top,
+                                left: currentPos.left,
+                            }}>
+                            {isFinal ? 'нет' : currentPos.text}
                         </button>
                     </div>
                 </div>
