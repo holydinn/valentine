@@ -12,11 +12,14 @@ export function ModalYes({isOpen, onClose}: { isOpen: boolean, onClose: () => vo
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className='title'>поздравляю!!</div>
-                        <img className='icon' src='/cute.jpg'/>
+                        <img className='icon' src={`${import.meta.env.BASE_URL}cute.jpg`}/>
                         <div className='text'>
-                            рада, что ты сделал правильный выбор! на самом деле ты сделал его уже в день когда выбрал
+                            рада, что ты сделал правильный выбор! на самом деле, ты сделал его уже в день, когда выбрал
                             меня хихихихи
                         </div>
+                        <button className={'btn btn-yes btn-modal'} onClick={onClose}>
+                            тьмок!
+                        </button>
                     </div>
                 </div>
             )}

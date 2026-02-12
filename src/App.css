@@ -3,7 +3,7 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    font-family: 'Fredoka', sans-serif;
+    /*font-family: 'Comic Relief', sans-serif;*/
 }
 
 .wrapper {
@@ -17,11 +17,12 @@
 
 .question {
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
     color: white;
     padding: 0;
     margin: 0;
+    height: 60px;
 }
 
 .btn-container {
@@ -42,7 +43,7 @@
     height: 60px;
     color: white;
     border: none;
-    font-family: 'Fredoka', sans-serif;
+    /*font-family: 'Comic Relief', sans-serif;*/
     font-size: 20px;
     font-weight: 500;
 

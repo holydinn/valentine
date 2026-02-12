@@ -47,14 +47,14 @@ function App() {
             {yesClicked ? (
                 <>
                     <div className="wrapper">
-                        <p className='final-text'>я знала, что ты сделаешь правильный выбор! скоро увидимся!</p>
+                        <p className='final-text'>знала, что ты сделаешь правильный выбор! скоро увидимся!</p>
                         <button className={'btn btn-again'} onClick={reset}>попробовать еще раз</button>
                     </div>
                 </>
 
             ) : (
                 <div className="wrapper">
-                    <img className='img-main' src='/cute2.jpg'/>
+                    <img className='img-main' src={`${import.meta.env.BASE_URL}cute2.jpg`}/>
                     <p className='question'>будешь моей валентинкой? :)</p>
                     <div className="btn-container">
                         <button className={'btn btn-yes'} onClick={() => setIsOpenModalYes(true)}>да!</button>
@@ -73,7 +73,7 @@ function App() {
             )}
 
 
-            <ModalNo isOpen={isOpenModalNo} onClose={() => setIsOpenModalNo(false)} yesClick={() => {
+            <ModalNo isOpen={isOpenModalNo} yesClick={() => {
                 setIsOpenModalNo(false);
                 setIsOpenModalYes(true);
             }}/>
