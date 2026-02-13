@@ -47,7 +47,7 @@ function App() {
             {yesClicked ? (
                 <>
                     <div className="wrapper">
-                        <p className='final-text'>знала, что ты сделаешь правильный выбор! скоро увидимся!</p>
+                        <p className='final-text'>люблю тебя! скоро увидимся!</p>
                         <button className={'btn btn-again'} onClick={reset}>попробовать еще раз</button>
                     </div>
                 </>
