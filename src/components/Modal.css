@@ -1,11 +1,11 @@
 .modal-no {
     background: white;
-    padding: 32px;
+    padding: 24px;
     border-radius: 16px;
     width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     place-items: center;
 }
 
